@@ -1,3 +1,7 @@
+#container {
+    margin-top: 260px;
+}
+
 .grid {
     display: flex;  
 }

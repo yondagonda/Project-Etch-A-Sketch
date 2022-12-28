@@ -3,11 +3,9 @@ const container = document.querySelector("div");
 const columns = 16;  // aka our 'div1's
 const rows = 16
 
-
 const grid = document.createElement("div");
 grid.className = 'grid'
 container.appendChild(grid);
-
 
     for (let i = 0; i < columns; i++) {
         const column = document.createElement('div');
@@ -23,7 +21,6 @@ container.appendChild(grid);
                 document.getElementsByClassName("row")
                 for (let k=0; k < 1; k++) {
                 row.style.backgroundColor = 'blue';
-                console.log(row.length);
             }});
 
             /*row.addEventListener('mouseleave', () => {
