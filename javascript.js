@@ -1,21 +1,39 @@
-const container = document.createElement("div");
-container.id = "container";
-document.body.appendChild(container);;
+const container = document.querySelector("div");
 
-const column = 16;  // aka our 'div1's
+const columns = 16;  // aka our 'div1's
 const rows = 16
 
-for (let i = 0; i < rows; i++) {
-    const div1 = document.createElement("div");
-    div1.classList.add('div1')
-    div1.textContent = 'WUT'
-    container.appendChild(div1);
-    for (let j = 1; j < column; j++) {
-        const div2 = document.createElement("div");
-        div2.classList.add('div2')
-        div2.textContent = 'WUT'
-        div1.appendChild(div2);
-    }  
-}
+
+const grid = document.createElement("div");
+grid.className = 'grid'
+container.appendChild(grid);
+
+
+    for (let i = 0; i < columns; i++) {
+        const column = document.createElement('div');
+        column.className = 'column';
+        
+        for (let j = 0; j < rows; j++) {
+            const row = document.createElement("div");
+            row.className = 'row'
+            row.textContent = 'LFG'
+            column.appendChild(row);
+
+            row.addEventListener('mouseenter', () => {
+                document.getElementsByClassName("row")
+                for (let k=0; k < 1; k++) {
+                row.style.backgroundColor = 'blue';
+                console.log(row.length);
+            }});
+
+            /*row.addEventListener('mouseleave', () => {
+                document.getElementsByClassName("row")
+                for (let k=0; k < 1; k++) {
+                row.style.backgroundColor = 'rgb(194, 164, 164';
+            }});*/
+    
+        };
+        grid.appendChild(column);
+};
 
 
