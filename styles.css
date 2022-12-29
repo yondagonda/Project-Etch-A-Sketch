@@ -35,7 +35,7 @@ h1 {
     width:1000px;
     margin-left: auto;
     margin-right: auto;
-    border: 4px solid #248bcf;
+    border: 3px solid #248bcf;
     border-radius: 4px;
 }
 
@@ -49,4 +49,5 @@ h1 {
     background-color: #1a1818;
     text-align: center;
     flex-grow: 1;
+    border: 1px groove #74747c;
 }
